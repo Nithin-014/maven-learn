@@ -1,14 +1,27 @@
 package clinic.programming.training;
 
+import java.util.ArrayList;
+import java.util.List;  // Corrected import statement
+
 public class Application {
-    
-    public Application() {
-        System.out.println ("Inside Application");
+
+    public void greet() {
+        List<String> greetings = new ArrayList<>();
+        greetings.add("Hello");
+
+        for (String greeting : greetings) {  // Fixed loop variable name
+            System.out.println("Greetings: " + greeting);
+        }
     }
 
-    // method main(): ALWAYS the APPLICATION entry point
-    public static void main (String[] args) {
-    	System.out.println ("Starting Application");
-	Application app = new Application();
+    public Application() {
+        System.out.println("Inside Application");
+    }
+
+    // Main method: Application entry point
+    public static void main(String[] args) {
+        System.out.println("Starting Application");
+        Application app = new Application();
+        app.greet();
     }
 }
