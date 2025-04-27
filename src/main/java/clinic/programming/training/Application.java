@@ -7,8 +7,13 @@ import org.apache.commons.lang3.StringUtils;
 public class Application {
 	
 	public int countWords(String sentence) {
-    return StringUtils.split(sentence).length;
+    if (sentence == null) {
+        return 0;
+    }
+    String[] words = StringUtils.split(sentence);
+    return words != null ? words.length : 0;
 	}
+
 
 
     public void greet() {
